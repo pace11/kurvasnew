@@ -1,5 +1,5 @@
 <section class="content-header">
-    <h1>INPUT PENGAWAS</h1>
+    <h1>INPUT TARGET</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i>Beranda</a></li>
     </ol>
@@ -50,7 +50,7 @@
                                                 '</div>'.
                                             '</div>';
                                     echo "<meta http-equiv='refresh' content='1;
-                                    url=?page=input2'>";
+                                    url=?page=target'>";
                                 }
                             } 
                         ?>

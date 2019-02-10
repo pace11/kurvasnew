@@ -1,5 +1,5 @@
 <section class="content-header">
-    <h1 <i class="fa fa-plus-star"></i>INPUT PENGAWAS</h1>
+    <h1 <i class="fa fa-plus-star"></i>INPUT TARGET</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
     </ol>
@@ -15,7 +15,7 @@
                             <h3 class="box-title">Form Tambah Data</h3>
                         </div>
                         
-                        <form action="?page=input2tambahpro" method="post" enctype="multipart/form-data">
+                        <form action="?page=targettambahpro" method="post" enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">

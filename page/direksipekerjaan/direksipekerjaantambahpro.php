@@ -45,7 +45,7 @@
                                                     '</div>'.
                                                 '</div>';
                                         echo "<meta http-equiv='refresh' content='1;
-                                        url=?page=input1'>";
+                                        url=?page=direksipekerjaan'>";
                                     }
                                 } 
                             ?>

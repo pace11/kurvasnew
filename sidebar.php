@@ -19,12 +19,12 @@
         <li class="<?php if ($_GET['page'] == 'pengawas' || $_GET['page'] == 'pengawastambah' || $_GET['page'] == 'pengawastambahpro' || $_GET['page'] == 'pengawasedit' || $_GET['page'] == 'pengawaseditpro' || $_GET['page'] == 'pengawashapus'){ echo "active";} ?>">
             <a href="?page=pengawas"><i class="fa fa-child"></i> <span>Pengawas</span></a>
         </li>
-        <li class="treeview <?php if ($_GET['page'] == 'input1' || $_GET['page'] == 'input2' ||  $_GET['page'] == 'input3' || 
-            $_GET['page'] == 'input1tambah' || $_GET['page'] == 'input2tambah' || $_GET['page'] == 'input3tambah' ||  
-            $_GET['page'] == 'input1tambahpro' || $_GET['page'] == 'input2tambahpro' || $_GET['page'] == 'input3tambahpro' ||
-            $_GET['page'] == 'input1edit' || $_GET['page'] == 'input2edit' || $_GET['page'] == 'input3edit' ||
-            $_GET['page'] == 'input1editpro' || $_GET['page'] == 'input2editpro' || $_GET['page'] == 'input3editpro' ||
-            $_GET['page'] == 'input1hapus' || $_GET['page'] == 'input2hapus' || $_GET['page'] == 'input3hapus' ){echo "active";} ?>">
+        <li class="treeview <?php if ($_GET['page'] == 'direksipekerjaan' || $_GET['page'] == 'target' ||  $_GET['page'] == 'progress' || 
+            $_GET['page'] == 'direksipekerjaantambah' || $_GET['page'] == 'targettambah' || $_GET['page'] == 'progresstambah' ||  
+            $_GET['page'] == 'direksipekerjaantambahpro' || $_GET['page'] == 'targettambahpro' || $_GET['page'] == 'progresstambahpro' ||
+            $_GET['page'] == 'direksipekerjaanedit' || $_GET['page'] == 'targetedit' || $_GET['page'] == 'progressedit' ||
+            $_GET['page'] == 'direksipekerjaaneditpro' || $_GET['page'] == 'targeteditpro' || $_GET['page'] == 'progresseditpro' ||
+            $_GET['page'] == 'direksipekerjaanhapus' || $_GET['page'] == 'targethapus' || $_GET['page'] == 'progresshapus' ){echo "active";} ?>">
           <a href="#">
             <i class="fa fa-pencil"></i> <span>Input</span>
             <span class="pull-right-container">
@@ -32,9 +32,9 @@
             </span>
           </a>
           <ul class="treeview-menu ">
-            <li class="<?php if($_GET['page'] == 'input1' || $_GET['page'] == 'input1tambah' || $_GET['page'] == 'input1tambahpro' || $_GET['page'] == 'input1edit' || $_GET['page'] == 'input1editpro' || $_GET['page'] == 'input1hapus') {echo "active";} ?>"><a href="?page=input1"><i class="fa fa-circle-o"></i>Direksi Pekerjaan</a></li>
-            <li class="<?php if($_GET['page'] == 'input2' || $_GET['page'] == 'input2tambah' || $_GET['page'] == 'input2tambahpro' || $_GET['page'] == 'input2edit' || $_GET['page'] == 'input2editpro' || $_GET['page'] == 'input2hapus') {echo "active";} ?>"><a href="?page=input2"><i class="fa fa-circle-o"></i>Target</a></li>
-            <li class="<?php if($_GET['page'] == 'input3' || $_GET['page'] == 'input3tambah' || $_GET['page'] == 'input3tambahpro' || $_GET['page'] == 'input3edit' || $_GET['page'] == 'input3editpro' || $_GET['page'] == 'input3hapus') {echo "active";} ?>"><a href="?page=input3"><i class="fa fa-circle-o"></i>Progress</a></li>          
+            <li class="<?php if($_GET['page'] == 'direksipekerjaan' || $_GET['page'] == 'direksipekerjaantambah' || $_GET['page'] == 'direksipekerjaantambahpro' || $_GET['page'] == 'direksipekerjaanedit' || $_GET['page'] == 'direksipekerjaaneditpro' || $_GET['page'] == 'direksipekerjaanhapus') {echo "active";} ?>"><a href="?page=direksipekerjaan"><i class="fa fa-circle-o"></i>Direksi Pekerjaan</a></li>
+            <li class="<?php if($_GET['page'] == 'target' || $_GET['page'] == 'targettambah' || $_GET['page'] == 'targettambahpro' || $_GET['page'] == 'targetedit' || $_GET['page'] == 'targeteditpro' || $_GET['page'] == 'targethapus') {echo "active";} ?>"><a href="?page=target"><i class="fa fa-circle-o"></i>Target</a></li>
+            <li class="<?php if($_GET['page'] == 'progress' || $_GET['page'] == 'progresstambah' || $_GET['page'] == 'progresstambahpro' || $_GET['page'] == 'progressedit' || $_GET['page'] == 'progresseditpro' || $_GET['page'] == 'progresshapus') {echo "active";} ?>"><a href="?page=progress"><i class="fa fa-circle-o"></i>Progress</a></li>          
           </ul>
 
 

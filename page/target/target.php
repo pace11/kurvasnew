@@ -1,5 +1,5 @@
 <section class="content-header">
-    <h1><i class="fa fa-plus-circle"></i> INPUT PENGAWAS </h1>
+    <h1><i class="fa fa-plus-circle"></i> INPUT TARGET </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
     </ol>
@@ -53,8 +53,8 @@
                                                         </div>
                                                     </td>
                                                     <td>
-                                                    <a class="btn btn-primary btn-sm" href="?page=input1edit&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-edit"></i> edit</a>
-                                                    <a class="btn btn-danger btn-sm" href="?page=input1hapus&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-trash"></i> hapus</a>
+                                                    <a class="btn btn-primary btn-sm" href="?page=targetedit&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-edit"></i> edit</a>
+                                                    <a class="btn btn-danger btn-sm" href="?page=targethapus&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-trash"></i> hapus</a>
                                                     </td>
                                                 </tr>
                                         <?php $no++; } ?>
@@ -74,11 +74,11 @@
                     <div class="box box-success">
                         <div class="box-header with-border">
                             <div class="pull-left">
-                                <h3 class="box-title">Form Pengisian Pengawas</h3>
+                                <h3 class="box-title">Form Pengisian Target</h3>
                             </div>
                         </div>
                         <div class="box-body">
-                            <form action="?page=input2tambahpro" method="post" enctype="multipart/form-data">
+                            <form action="?page=targettambahpro" method="post" enctype="multipart/form-data">
                                         
                                 <div class="row">
                                     <div class="col-md-4">

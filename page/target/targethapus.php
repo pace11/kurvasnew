@@ -1,5 +1,5 @@
 <section class="content-header">
-    <h1>INPUT PENGAWAS</h1>
+    <h1>INPUT TARGET</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i>Beranda</a></li>
     </ol>
@@ -25,18 +25,18 @@
                                 <div class="callout callout-danger">
                                     <h5>Peringatan !</h5>
                                     <p>Anda yakin ingin menghapus data ini ?</p>
-                                <form action="?page=input2hapus" method="post" enctype="multipart/form-data">
+                                <form action="?page=targethapus" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="nodin_ren" value="<?= $_GET['id'] ?>">
                                     <input class="btn btn-default" type="submit" name="submit" value="Ya">
-                                    <a class="btn btn-info" href="?page=input2"><i class="fa fa-chevron-circle-left"></i> Kembali</a>
+                                    <a class="btn btn-info" href="?page=target"><i class="fa fa-chevron-circle-left"></i> Kembali</a>
                                 </form>
                                 </div>
                             </div>
                         </div>
                             <?php 
                             if(isset($_POST['submit'])){
-                                $nodin_ren = $_POST['nodin_ren'];
-                                $delete = mysqli_query($conn,"DELETE FROM tbl_input5 WHERE nodin_ren='$nodin_ren'") or die (mysqli_error($conn));
+                                $nomor_pjn_spj = $_POST['nomor_pjn_spjn'];
+                                $delete = mysqli_query($conn,"DELETE FROM tbl_input4 WHERE nomor_pjn_spj='$nomer_pjn_spj'") or die (mysqli_error($conn));
                                 if ($delete){
                                     echo    '<div class="row">'.
                                                 '<div class="col-md-12">'.
@@ -46,7 +46,7 @@
                                                 '</div>'.
                                             '</div>';
                                     echo "<meta http-equiv='refresh' content='1;
-                                    url=?page=input2'>";
+                                    url=?page=target'>";
                                 } 
                             }
                             ?>

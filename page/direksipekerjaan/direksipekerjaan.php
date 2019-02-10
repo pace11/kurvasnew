@@ -16,7 +16,7 @@
                                 <h3 class="box-title">Data Table Direksi Pekerjaan</h3>
                             </div>
                             <div class="pull-right">
-                                <a href="?page=input1tambah" class="btn btn-success"><i class="fa fa-plus-square"></i> Tambah Data</a>
+                                <a href="?page=direksipekerjaantambah" class="btn btn-success"><i class="fa fa-plus-square"></i> Tambah Data</a>
                             </div>
                         </div>
                         <div class="box-body">
@@ -45,8 +45,8 @@
                                                     <td>
 
                                                     <?php if ($page == 'input1') { ?>
-                                                    <a class="btn btn-primary btn-sm" href="?page=input1edit&id=<?php echo $data['nomer_pjn_spj']; ?>"><i class="fa fa-edit"></i> edit</a>
-                                                    <a class="btn btn-danger btn-sm" href="?page=input1hapus&id=<?php echo $data['nomer_pjn_spj']; ?>"><i class="fa fa-trash"></i> hapus</a>
+                                                    <a class="btn btn-primary btn-sm" href="?page=direksipekerjaanedit&id=<?php echo $data['nomer_pjn_spj']; ?>"><i class="fa fa-edit"></i> edit</a>
+                                                    <a class="btn btn-danger btn-sm" href="?page=direksipekerjaanhapus&id=<?php echo $data['nomer_pjn_spj']; ?>"><i class="fa fa-trash"></i> hapus</a>
                                                     <?php } ?>
                                                     </td>
                                                 </tr>

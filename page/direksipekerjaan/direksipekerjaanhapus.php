@@ -21,10 +21,10 @@
                                     <div class="callout callout-danger">
                                         <h5>Peringatan !</h5>
                                         <p>Anda yakin ingin menghapus data ini ?</p>
-                                    <form action="?page=input1hapus" method="post" enctype="multipart/form-data">
+                                    <form action="?page=direksipekerjaanhapus" method="post" enctype="multipart/form-data">
                                         <input type="hidden" name="nomer_pjn_spj" value="<?= $_GET['id'] ?>">
                                         <input class="btn btn-default" type="submit" name="submit" value="Ya">
-                                        <a class="btn btn-info" href="?page=input1"><i class="fa fa-chevron-circle-left"></i> Kembali</a>
+                                        <a class="btn btn-info" href="?page=direksipekerjaan"><i class="fa fa-chevron-circle-left"></i> Kembali</a>
                                     </form>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                                     '</div>'.
                                                 '</div>';
                                         echo "<meta http-equiv='refresh' content='1;
-                                        url=?page=input1'>";
+                                        url=?page=direksipekerjaan'>";
                                     } 
                                 }
                                 ?>

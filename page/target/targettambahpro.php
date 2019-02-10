@@ -1,5 +1,5 @@
 <section class="content-header">
-    <h1><i class="fa fa-plus-circle"></i> INPUT PENGAWAS </h1>
+    <h1><i class="fa fa-plus-circle"></i> INPUT TARGET </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
     </ol>
@@ -13,7 +13,7 @@
                     <div class="box box-success">
                         <div class="box-header with-border">
                             <div class="pull-left">
-                                <h3 class="box-title">Form Pengisian Pengawas</h3>
+                                <h3 class="box-title">Form Pengisian Target</h3>
                             </div>
                         </div>
                         <div class="box-body">
@@ -57,7 +57,7 @@
                                                 '</div>'.
                                             '</div>';
                                     echo "<meta http-equiv='refresh' content='1;
-                                    url=?page=input1'>";
+                                    url=?page=target'>";
                                 }
                         }
 

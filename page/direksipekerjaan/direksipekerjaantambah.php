@@ -28,7 +28,7 @@
                             <h3 class="box-title">Form Tambah Data</h3>
                         </div>
                         
-                        <form action="?page=input1tambahpro" method="post" enctype="multipart/form-data">
+                        <form action="?page=direksipekerjaantambahpro" method="post" enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-4">
@@ -88,7 +88,7 @@
                         </div>
                         <div class="box-footer">
                             <input type="submit" name="submit" class="btn btn-success" value="Simpan">
-                            <a href="?page=input1" class="btn btn-danger">Batal</a>    
+                            <a href="?page=direksipekerjaan" class="btn btn-danger">Batal</a>    
                         </div>
                         </form>
                     </div>

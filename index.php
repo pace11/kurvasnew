@@ -110,7 +110,7 @@
       $("#nopjn").change(function(){
         var no  = $("#nopjn").val();
           $.ajax({
-            url:"page/input2/listjenispekerjaan.php",
+            url:"page/target/listjenispekerjaan.php",
             data:"no=" + no,
             success:function(data){
               $("#jenispekerjaan").val(data);
