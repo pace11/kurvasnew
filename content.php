@@ -29,12 +29,14 @@ elseif ($page == "logout") include("page/logout.php");
     elseif ($page == "targetedit")            include("page/target/targetedit.php");
     elseif ($page == "targeteditpro")         include("page/target/targeteditpro.php");
     elseif ($page == "targethapus")           include("page/target/targethapus.php");
+    elseif ($page == "targetgrafik")          include("page/target/targetgrafik.php");
 
     // -------------------------- Input --------------------------
     elseif ($page == "progress")                include("page/progress/progress.php");
     elseif ($page == "progresstambah")          include("page/progress/progresstambah.php");
     elseif ($page == "progresstambahpro")       include("page/progress/progresstambahpro.php");
     elseif ($page == "progressedit")            include("page/progress/progressedit.php");
+    elseif ($page == "progressgrafik")            include("page/progress/progressgrafik.php");
     elseif ($page == "progresseditpro")         include("page/progress/progresseditpro.php");
     elseif ($page == "progresshapus")           include("page/progress/progresshapus.php");
 

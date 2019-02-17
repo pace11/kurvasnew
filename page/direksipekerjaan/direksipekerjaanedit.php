@@ -47,8 +47,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                         <label>Pengawas</label>    
-                                        <input type="text" class="form-control" name="pengawas" placeholder="Masukan nama pengawas" autocomplete="off" value="<?= $data['pengawas'] ?>" required>
+                                        <label>Pengawas</label>    
+                                        <select class="form-control" name="pengawas">
+                                            <?php
+                                                $pengawas = mysqli_query($conn, "SELECT * FROM tbl_pengawas");
+                                                while ($row = mysqli_fetch_array($pengawas)){ ?>
+                                                    <option value="<?= $row['pengawas'] ?>"<?php if($row['pengawas'] == $data['pengawas']){echo "selected";} ?>><?= $row['pengawas'] ?></option>
+                                            <?php   }   ?>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

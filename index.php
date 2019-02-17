@@ -137,9 +137,9 @@
 <?php
 }
 else { ?>
-<div class="col-md-12" align="center">
+<!-- <div class="col-md-12" align="center">
   <button type="button" name="button" class="btn btn-primary">Login Terlebih dahulu</button>
-</div>
+</div> -->
 
 <?php echo"<meta http-equiv='refresh' content='1;
 url=login.php'>";

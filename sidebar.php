@@ -24,7 +24,8 @@
             $_GET['page'] == 'direksipekerjaantambahpro' || $_GET['page'] == 'targettambahpro' || $_GET['page'] == 'progresstambahpro' ||
             $_GET['page'] == 'direksipekerjaanedit' || $_GET['page'] == 'targetedit' || $_GET['page'] == 'progressedit' ||
             $_GET['page'] == 'direksipekerjaaneditpro' || $_GET['page'] == 'targeteditpro' || $_GET['page'] == 'progresseditpro' ||
-            $_GET['page'] == 'direksipekerjaanhapus' || $_GET['page'] == 'targethapus' || $_GET['page'] == 'progresshapus' ){echo "active";} ?>">
+            $_GET['page'] == 'direksipekerjaanhapus' || $_GET['page'] == 'targethapus' || $_GET['page'] == 'progresshapus' || 
+            $_GET['page'] == 'targetgrafik'){echo "active";} ?>">
           <a href="#">
             <i class="fa fa-pencil"></i> <span>Input</span>
             <span class="pull-right-container">
@@ -33,7 +34,7 @@
           </a>
           <ul class="treeview-menu ">
             <li class="<?php if($_GET['page'] == 'direksipekerjaan' || $_GET['page'] == 'direksipekerjaantambah' || $_GET['page'] == 'direksipekerjaantambahpro' || $_GET['page'] == 'direksipekerjaanedit' || $_GET['page'] == 'direksipekerjaaneditpro' || $_GET['page'] == 'direksipekerjaanhapus') {echo "active";} ?>"><a href="?page=direksipekerjaan"><i class="fa fa-circle-o"></i>Direksi Pekerjaan</a></li>
-            <li class="<?php if($_GET['page'] == 'target' || $_GET['page'] == 'targettambah' || $_GET['page'] == 'targettambahpro' || $_GET['page'] == 'targetedit' || $_GET['page'] == 'targeteditpro' || $_GET['page'] == 'targethapus') {echo "active";} ?>"><a href="?page=target"><i class="fa fa-circle-o"></i>Target</a></li>
+            <li class="<?php if($_GET['page'] == 'target' || $_GET['page'] == 'targettambah' || $_GET['page'] == 'targettambahpro' || $_GET['page'] == 'targetedit' || $_GET['page'] == 'targeteditpro' || $_GET['page'] == 'targethapus' || $_GET['page'] == 'targetgrafik') {echo "active";} ?>"><a href="?page=target"><i class="fa fa-circle-o"></i>Target</a></li>
             <li class="<?php if($_GET['page'] == 'progress' || $_GET['page'] == 'progresstambah' || $_GET['page'] == 'progresstambahpro' || $_GET['page'] == 'progressedit' || $_GET['page'] == 'progresseditpro' || $_GET['page'] == 'progresshapus') {echo "active";} ?>"><a href="?page=progress"><i class="fa fa-circle-o"></i>Progress</a></li>          
           </ul>
 

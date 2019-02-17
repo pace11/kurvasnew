@@ -31,18 +31,17 @@
                                     </thead>
                                     <tbody>
                                     <?php
-                                        $no = 1;
                                         $sql = mysqli_query($conn,"SELECT * FROM tbl_pengawas") or die (mysqli_error($conn));
                                         while($data = mysqli_fetch_array($sql)){ ?>
                                             <tr>    
-                                                <td><?= $no ?></td>
+                                                <td><?= $data['id'] ?></td>
                                                 <td><?= $data['pengawas'] ?></a></td>
                                                 <td>
                                                     <a class="btn btn-primary btn-sm" href="?page=pengawasedit&id=<?php echo $data['pengawas']; ?>"><i class="fa fa-edit"></i> Edit</a>
                                                     <a class="btn btn-danger btn-sm" href="?page=pengawashapus&id=<?php echo $data['pengawas']; ?>"><i class="fa fa-trash"></i> hapus</a>
                                                 </td>
                                             </tr>
-                                        <?php $no++; } ?>
+                                        <?php  } ?>
                                     </tbody>
                                 </table>
                             </div>

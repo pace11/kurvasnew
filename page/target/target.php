@@ -55,6 +55,7 @@
                                                     <td>
                                                     <a class="btn btn-primary btn-sm" href="?page=targetedit&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-edit"></i> edit</a>
                                                     <a class="btn btn-danger btn-sm" href="?page=targethapus&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-trash"></i> hapus</a>
+                                                    <a class="btn btn-success btn-sm" href="?page=targetgrafik&id=<?php echo $data['id_pekerjaan']; ?>"> <i class="fa fa-line-chart"></i> grafik</a>
                                                     </td>
                                                 </tr>
                                         <?php $no++; } ?>
@@ -117,7 +118,9 @@
                                                 <th>Uraian</th>
                                                 <th>Harga</th>
                                                 <th>Bobot</th>
-                                                <th>Hari Kerja</th>
+                                                <th>Mulai Kerja (week)</th>
+                                                <th>Lama Kerja (week)</th>
+
                                             </tr>
                                             <?php
                                                 $no = 1;
@@ -128,10 +131,13 @@
                                                     <td><?= $no ?></td>
                                                     <td><?= $data['id_sktm'] ?></td>
                                                     <td>
-                                                        <input type="text" class="form-control fieldsktm" name="hargasktm<?= $no ?>">
+                                                        <input type="text" class="form-control fieldsktm" name="hargasktm<?= $no ?>" id="hargasktm<?= $no ?>">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control fieldsktm" name="bobotsktm<?= $no ?>">
+                                                        <input type="text" class="form-control fieldsktm" name="bobotsktm<?= $no ?>" id="bobotsktm<?= $no ?>" readonly>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsktm" name="mulaikerjasktm<?= $no ?>">
                                                     </td>
                                                     <td>
                                                         <input type="text" class="form-control fieldsktm" name="hari_kerjasktm<?= $no ?>">
@@ -154,7 +160,8 @@
                                                 <th>Uraian</th>
                                                 <th>Harga</th>
                                                 <th>Bobot</th>
-                                                <th>Hari Kerja</th>
+                                                <th>Mulai Kerja(week)</th>
+                                                <th>Lama Kerja (week)</th>
                                             </tr>
                                             <?php
                                                 $no = 1;
@@ -168,7 +175,10 @@
                                                         <input type="text" class="form-control fieldsipil" name="hargasipil<?= $no ?>">
                                                     </td>
                                                     <td>
-                                                        <input type="text" class="form-control fieldsipil" name="bobotsipil<?= $no ?>">
+                                                        <input type="text" class="form-control fieldsipil" name="bobotsipil<?= $no ?>" readonly>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsipil" name="mulaikerjasipil<?= $no ?>">
                                                     </td>
                                                     <td>
                                                         <input type="text" class="form-control fieldsipil" name="hari_kerjasipil<?= $no ?>">
@@ -190,5 +200,3 @@
         </div>
     </div>
 </section>
-
-

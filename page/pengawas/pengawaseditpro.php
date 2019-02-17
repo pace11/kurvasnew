@@ -19,12 +19,12 @@
                             <?php
                             
                             if (isset($_POST['submit'])){
-                                
-                                $pengawas   = $_POST['pengawas'];
+                                $id             = $_POST['id'];
+                                $pengawas       = $_POST['pengawas'];
 
                                     $input = mysqli_query($conn,"UPDATE tbl_pengawas SET
-                                            pengawas = '$pengawas'
-                                            WHERE pengawas = '$pengawas'
+                                            pengawas        = '$pengawas'
+                                            WHERE id        = '$id'
                                             ") or die (mysqli_error($conn));
                                                                     
                                     if ($input){

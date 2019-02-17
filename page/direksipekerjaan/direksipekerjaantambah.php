@@ -60,7 +60,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Pengawas</label>    
-                                        <select class="form-control" name="nodin_ren">
+                                        <select class="form-control" name="pengawas">
                                             <option value="" style="display:none;">-- pilih salah satu --</option>
                                                 <?php
                                                     $pengawas = mysqli_query($conn, "SELECT * FROM tbl_pengawas");

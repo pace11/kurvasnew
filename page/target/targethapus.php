@@ -35,8 +35,8 @@
                         </div>
                             <?php 
                             if(isset($_POST['submit'])){
-                                $nomor_pjn_spj = $_POST['nomor_pjn_spjn'];
-                                $delete = mysqli_query($conn,"DELETE FROM tbl_input4 WHERE nomor_pjn_spj='$nomer_pjn_spj'") or die (mysqli_error($conn));
+                                $nomer_pjn_spj = $_POST['nomer_pjn_spjn'];
+                                $delete = mysqli_query($conn,"DELETE FROM tbl_input4 WHERE nomer_pjn_spj='$nomer_pjn_spj'") or die (mysqli_error($conn));
                                 if ($delete){
                                     echo    '<div class="row">'.
                                                 '<div class="col-md-12">'.

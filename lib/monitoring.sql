@@ -3,15 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Feb 07, 2019 at 05:19 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
-=======
--- Generation Time: Feb 09, 2019 at 08:23 AM
+-- Generation Time: Feb 17, 2019 at 11:07 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
->>>>>>> updatesabtu
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,13 +39,8 @@ CREATE TABLE `tbl_input2` (
 --
 
 INSERT INTO `tbl_input2` (`id_pekerjaan`, `nomer_pjn_spj`, `value_pekerjaan`) VALUES
-<<<<<<< HEAD
-(2, '0014/DAN 02.03/A.BLG/2018', '[{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"111\",\"bobot\":\"1\",\"harikerja\":\"1\"}]'),
-(3, '0012/DAN 02.03/A.BLG/2018', '[{\"harga\":\"10\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"10\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"11\",\"bobot\":\"21\",\"harikerja\":\"22\"},{\"harga\":\"5\",\"bobot\":\"8\",\"harikerja\":\"34\"},{\"harga\":\"39\",\"bobot\":\"10\",\"harikerja\":\"88\"},{\"harga\":\"34\",\"bobot\":\"54\",\"harikerja\":\"30\"},{\"harga\":\"34\",\"bobot\":\"20\",\"harikerja\":\"33\"},{\"harga\":\"20\",\"bobot\":\"21\",\"harikerja\":\"15\"}]');
-=======
-(3, '0012/DAN 02.03/A.BLG/2018', '[{\"harga\":\"10\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"10\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"11\",\"bobot\":\"21\",\"harikerja\":\"22\"},{\"harga\":\"5\",\"bobot\":\"8\",\"harikerja\":\"34\"},{\"harga\":\"39\",\"bobot\":\"10\",\"harikerja\":\"88\"},{\"harga\":\"34\",\"bobot\":\"54\",\"harikerja\":\"30\"},{\"harga\":\"34\",\"bobot\":\"20\",\"harikerja\":\"33\"},{\"harga\":\"20\",\"bobot\":\"21\",\"harikerja\":\"15\"}]'),
-(4, '0014/DAN 02.03/A.BLG/2018', '[{\"harga\":\"10000\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"1000\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"1000\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"10000\",\"bobot\":\"10\",\"harikerja\":\"10\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"1\",\"harikerja\":\"1\"}]');
->>>>>>> updatesabtu
+(1, '0013/DAN 02.03/A.BLG/2019', '[{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"11\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"11\"},{\"harga\":\"11\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"11\",\"bobot\":\"\",\"harikerja\":\"1\"}]'),
+(3, '0015/DAN 02.03/A.BLG/2018', '[{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"23\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null}]');
 
 -- --------------------------------------------------------
 
@@ -72,14 +61,10 @@ CREATE TABLE `tbl_input4` (
 --
 
 INSERT INTO `tbl_input4` (`nomer_pjn_spj`, `tanggal_awal`, `tanggal_akhir`, `pengawas`, `jenis_pekerjaan`) VALUES
-('0012/DAN 02.03/A.BLG/2018', '2019-01-31', '2019-02-06', 'Pak Ocid', 'SKTM'),
-('0014/DAN 02.03/A.BLG/2018', '2019-01-30', '2019-01-31', 'Pak Rakhmadi', 'SIPIL'),
-<<<<<<< HEAD
+('0012/DAN 02.03/A.BLG/2018', '2019-01-31', '2019-02-06', 'Afif Kuswanto', 'SKTM'),
+('0013/DAN 02.03/A.BLG/2019', '2019-02-13', '2019-02-26', 'Ody M Haidi', 'SIPIL'),
+('0014/DAN 02.03/A.BLG/2018', '2019-01-30', '2019-01-31', 'Panji Areta', 'SIPIL'),
 ('0015/DAN 02.03/A.BLG/2018', '2019-01-31', '2019-02-01', 'Ilham Alfuti', 'SKTM');
-=======
-('0015/DAN 02.03/A.BLG/2018', '2019-01-31', '2019-02-01', 'Ilham Alfuti', 'SKTM'),
-('0016/DAN 02.03/A.BLG/2019', '2019-02-08', '2019-02-13', 'Nikku', 'SIPIL');
->>>>>>> updatesabtu
 
 -- --------------------------------------------------------
 
@@ -110,19 +95,20 @@ INSERT INTO `tbl_input5` (`nodin_ren`, `uraian`, `harga`, `bobot`, `hari_kerja_w
 --
 
 CREATE TABLE `tbl_pengawas` (
-  `pengawas` varchar(50) NOT NULL
+  `id` int(11) NOT NULL,
+  `pengawas` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_pengawas`
 --
 
-INSERT INTO `tbl_pengawas` (`pengawas`) VALUES
-('Afif Kuswanto'),
-('Estyas Pratomo'),
-('Ilham Alfuti'),
-('Ody M Haidi'),
-('Panji Areta');
+INSERT INTO `tbl_pengawas` (`id`, `pengawas`) VALUES
+(1, 'Afif Kuswanto'),
+(2, 'Estyas Pratomo'),
+(3, 'Ilham Alfuti'),
+(4, 'Ody M Haidi'),
+(5, 'Panji Areta');
 
 -- --------------------------------------------------------
 
@@ -131,46 +117,38 @@ INSERT INTO `tbl_pengawas` (`pengawas`) VALUES
 --
 
 CREATE TABLE `tbl_sipil` (
-  `id_sipil` varchar(100) NOT NULL
+  `id` int(11) NOT NULL,
+  `id_sipil` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_sipil`
 --
 
-INSERT INTO `tbl_sipil` (`id_sipil`) VALUES
-<<<<<<< HEAD
-('bongkar kabel'),
-('gali tanah'),
-('kabel kabel kabel'),
-('kabel kabel tanah'),
-('material kabel'),
-('pemasangan kabel bawah'),
-('pembersihan lahan'),
-('pengairan tanah');
-=======
-('Instalasi Listrik dan lain-lain'),
-('Jasa Angkutan Material'),
-('Pekerjaan Besi dan Pemasangan'),
-('Pekerjaan Besi dan PIpa'),
-('Pekerjaan Beton dan Pondasi'),
-('Pekerjaan Bongkar (Tambahan)'),
-('Pekerjaan Galian dan Urugan'),
-('Pekerjaan lain-lain'),
-('Pekerjaan Pagar dan Perlengkapannya'),
-('Pekerjaan Pasangan'),
-('Pekerjaan Pasangan dan Plesteran'),
-('Pekerjaan Pemasangan Instalasi Gardu'),
-('Pekerjaan Pembongkaran'),
-('Pekerjaan Pembongkaran Instalasi Gardu'),
-('Pekerjaan Pemeliharaan Instalasi Gardu'),
-('Pekerjaan Pemipaan'),
-('Pekerjaan Pengecatan'),
-('Pekerjaan Persiapan'),
-('Pekerjaan Plesteran'),
-('Pekerjaan Tanaman dan Jalan'),
-('Pengurusan Izin');
->>>>>>> updatesabtu
+INSERT INTO `tbl_sipil` (`id`, `id_sipil`) VALUES
+(1, 'Pengurusan Izin'),
+(2, 'Pekerjaan Persiapan'),
+(3, 'Pekerjaan Galian dan Urugan'),
+(4, 'Pekerjaan Pembongkaran'),
+(5, 'Pekerjaan Pasangan'),
+(6, 'Pekerjaan Plesteran'),
+(7, 'Pekerjaan Beton dan Pondasi'),
+(8, 'Pekerjaan Besi dan Pemasangan'),
+(9, 'Pekerjaan Pemipaan'),
+(10, 'Pekerjaan Pengecatan'),
+(11, 'Pekerjaan Tanaman dan Jalan'),
+(12, 'Pekerjaan Pagar dan Perlengkapannya'),
+(13, 'Instalasi Listrik dan Lain-Lain'),
+(14, 'Pekerjaan Pemasangan Instalasi Gardu'),
+(15, 'Pekerjaan Pembongkaran Instalasi Gardu'),
+(16, 'Pekerjaan Pemeliharaan Instalasi Gardu'),
+(17, 'Pekerjaan Lain-Lain'),
+(18, 'Pekerjaan Persiapan 2'),
+(19, 'Pekerjaan Beton dan Pondasi 2'),
+(20, 'Pekerjaan Pasangan dan Plesteran'),
+(21, 'Pekerjaan Besi dan Pipa'),
+(22, 'Jasa Angkutan Material'),
+(23, 'Pekerjaan Bongkar (Tambahan)');
 
 -- --------------------------------------------------------
 
@@ -179,26 +157,23 @@ INSERT INTO `tbl_sipil` (`id_sipil`) VALUES
 --
 
 CREATE TABLE `tbl_sktm` (
-  `id_sktm` varchar(100) NOT NULL
+  `id` int(11) NOT NULL,
+  `id_sktm` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_sktm`
 --
 
-INSERT INTO `tbl_sktm` (`id_sktm`) VALUES
-('Material Pelengkap'),
-('Pekerjaan Angkutan'),
-('Pekerjaan Boring'),
-('Pekerjaan Galian'),
-('Pekerjaan Lain Lain'),
-('Penarikan dan Penyambungan'),
-('Pengadaan Material'),
-<<<<<<< HEAD
-=======
-('Pengurusan Izin'),
->>>>>>> updatesabtu
-('Perbaikan Bekas Galian');
+INSERT INTO `tbl_sktm` (`id`, `id_sktm`) VALUES
+(1, 'Pengurusan Izin'),
+(2, 'Pekerjaan Galian'),
+(3, 'Pekerjaan Boring'),
+(4, 'Penarikan dan Penyambungan'),
+(5, 'Perbaiakan Bekas Galian'),
+(6, 'Material Pelengkap'),
+(7, 'Pekerjaan Lain-Lain'),
+(8, 'Angkutan Kabel');
 
 -- --------------------------------------------------------
 
@@ -248,19 +223,19 @@ ALTER TABLE `tbl_input5`
 -- Indexes for table `tbl_pengawas`
 --
 ALTER TABLE `tbl_pengawas`
-  ADD PRIMARY KEY (`pengawas`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_sipil`
 --
 ALTER TABLE `tbl_sipil`
-  ADD PRIMARY KEY (`id_sipil`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_sktm`
 --
 ALTER TABLE `tbl_sktm`
-  ADD PRIMARY KEY (`id_sktm`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_user`
@@ -276,11 +251,13 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_input2`
 --
 ALTER TABLE `tbl_input2`
-<<<<<<< HEAD
-  MODIFY `id_pekerjaan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-=======
   MODIFY `id_pekerjaan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
->>>>>>> updatesabtu
+
+--
+-- AUTO_INCREMENT for table `tbl_pengawas`
+--
+ALTER TABLE `tbl_pengawas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables

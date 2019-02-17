@@ -29,25 +29,23 @@
                                     </div>
                                 </div>
                             </div>
-                                <?php 
-                                if(isset($_POST['submit'])){
-                                    $pengawas = $_POST['pengawas'];
-                                    $delete = mysqli_query($conn,"DELETE FROM tbl_pengawas WHERE pengawas='$pengawas'") or die (mysqli_error($conn));
-                                    if ($delete){
-                                        echo    '<div class="row">'.
-                                                    '<div class="col-md-12">'.
-                                                        '<div class="alert alert-success alert-dismissible">'.
-                                                        '<h5><i class="icon fa fa-check"></i> Alert!</h5>'.
-                                                        'Data berhasil dihapus.</div>'.
-                                                    '</div>'.
-                                                '</div>';
-                                        echo "<meta http-equiv='refresh' content='1;
-                                        url=?page=pengawas'>";
-                                    } 
-                                }
-                                ?>
-                        </div>
-                        <div class="card-footer">
+                            <?php 
+                            if(isset($_POST['submit'])){
+                                $pengawas = $_POST['pengawas'];
+                                $delete = mysqli_query($conn,"DELETE FROM tbl_pengawas WHERE pengawas='$pengawas'") or die (mysqli_error($conn));
+                                if ($delete){
+                                    echo    '<div class="row">'.
+                                                '<div class="col-md-12">'.
+                                                    '<div class="alert alert-success alert-dismissible">'.
+                                                    '<h5><i class="icon fa fa-check"></i> Alert!</h5>'.
+                                                    'Data berhasil dihapus.</div>'.
+                                                '</div>'.
+                                            '</div>';
+                                    echo "<meta http-equiv='refresh' content='1;
+                                    url=?page=pengawas'>";
+                                } 
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

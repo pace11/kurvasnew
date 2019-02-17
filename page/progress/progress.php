@@ -13,55 +13,189 @@
                     <div class="box box-success">
                         <div class="box-header with-border">
                             <div class="pull-left">
+                                <h3 class="box-title">List Data</h3>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table id="table1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>NOMER PJN SPJ</th>
+                                            <th>VALUE PEKERJAAN</th>
+                                            <th>AKSI</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php 
+                                            $no = 1;
+                                            $query = mysqli_query($conn, "SELECT * FROM tbl_input2
+                                                                          JOIN tbl_input4 ON tbl_input2.nomer_pjn_spj=tbl_input4.nomer_pjn_spj");
+                                            while($data = mysqli_fetch_array($query)) { ?>
+                                                <tr>
+                                                    <td><?= $no ?></td>
+                                                    <td><?= $data['nomer_pjn_spj'] ?></td>
+                                                    <td>
+                                                        <div class="panel box box-success">
+                                                            <div class="box-header with-border">
+                                                                <h4 class="box-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $no ?>">
+                                                                Data <?= $data['nomer_pjn_spj'] ?>
+                                                                </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse<?= $no ?>" class="panel-collapse collapse">
+                                                                <div class="box-body">
+                                                                    <?= getValPekerjaan($data['nomer_pjn_spj'],$data['jenis_pekerjaan']) ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                    <a class="btn btn-primary btn-sm" href="?page=progressedit&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-edit"></i> edit</a>
+                                                    <a class="btn btn-danger btn-sm" href="?page=progresshapus&id=<?php echo $data['id_pekerjaan']; ?>"><i class="fa fa-trash"></i> hapus</a>
+                                                    <a class="btn btn-success btn-sm" href="?page=progressgrafik&id=<?php echo $data['id_pekerjaan']; ?>"> <i class="fa fa-line-chart"></i> grafik</a>
+                                                    </td>
+                                                </tr>
+                                        <?php $no++; } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-success">
+                        <div class="box-header with-border">
+                            <div class="pull-left">
                                 <h3 class="box-title">Form Pengisian Progress</h3>
                             </div>
                         </div>
                         <div class="box-body">
+                            <form action="?page=progresstambahpro" method="post" enctype="multipart/form-data">
                                         
-                        <form action="?page=progresstambahpro" method="post" enctype="multipart/form-data">
-                                        
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Nomor PJN/SPJ</label>    
-                                    <input type="text" class="form-control" name="nomer_pjn_spj" placeholder="Masukan Nomor PJN/SPJ" required>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">   
-                                        <label>Jenis Pekerjaan</label>
-                                        <select class="form-control" name="jenis_pekerjaan">
-                                        <option style="display:none;">-- pilih salah satu --</option>
-                                        <option value="SKTM">SKTM</option>
-                                        <option value="SIPIL">SIPIL</option>
-                                        </select>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Nomor PJN/SPJ</label>    
+                                            <select id="nopjn" class="form-control" name="nopjn">
+                                            <option style="display:none;">-- pilih salah satu --</option>
+                                            <?php 
+                                            $noPjn = mysqli_query($conn, "SELECT tbl_input4.nomer_pjn_spj as nomer FROM tbl_input4
+                                                                          LEFT JOIN tbl_input2 ON tbl_input4.nomer_pjn_spj=tbl_input2.nomer_pjn_spj
+                                                                          WHERE tbl_input2.nomer_pjn_spj IS NULL");
+                                            while($getnoPjn = mysqli_fetch_array($noPjn)){
+                                                echo "<option value='".$getnoPjn['nomer']."'>".$getnoPjn['nomer']."</option>";
+                                            } 
+                                            ?>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">   
+                                            <label>Jenis Pekerjaan</label>
+                                            <input type="text" id="jenispekerjaan" class="form-control" name="jenispekerjaan" readonly>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>                    
+                                <div class="row">
+                                    <div class="col-md-8" id="tblsktm">
+                                    <?php
+                                        $hitsktm  = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM tbl_sktm"));
+                                    ?>
+                                    <input type="hidden" name="count" value="<?= $hitsktm ?>">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                            <tr>
+                                                <th style="width: 10px">No</th>
+                                                <th>Uraian</th>
+                                                <th>Harga</th>
+                                                <th>Bobot</th>
+                                                <th>Lama Kerja (week)</th>
+                                                <th>Porgress</th>
+                                            </tr>
+                                            <?php
+                                                $no = 1;
+                                                $query = mysqli_query($conn, "SELECT * FROM tbl_sktm");
+                                                while($data = mysqli_fetch_array($query)) {
+                                            ?>
+                                                <tr>
+                                                    <td><?= $no ?></td>
+                                                    <td><?= $data['id_sktm'] ?></td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsktm" name="hargasktm<?= $no ?>" id="hargasktm<?= $no ?>">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsktm" name="bobotsktm<?= $no ?>" id="bobotsktm<?= $no ?>" readonly>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsktm" name="hari_kerjasktm<?= $no ?>">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsktm" name="Progress<?= $no ?>">
+                                                    </td>
+                                                </tr>
+                                            <?php $no++; } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-8" id="tblsipil">
+                                    
+                                    <?php
+                                        $hitsipil  = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM tbl_sipil"));
+                                    ?>
+                                    <input type="hidden" name="count" value="<?= $hitsipil ?>">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                            <tr>
+                                                <th style="width: 10px">No</th>
+                                                <th>Uraian</th>
+                                                <th>Harga</th>
+                                                <th>Bobot</th>
+                                                <th>Lama Kerja (week)</th>
+                                            </tr>
+                                            <?php
+                                                $no = 1;
+                                                $query = mysqli_query($conn, "SELECT * FROM tbl_sipil");
+                                                while($data = mysqli_fetch_array($query)) {
+                                            ?>
+                                                <tr>
+                                                    <td><?= $no ?></td>
+                                                    <td><?= $data['id_sipil'] ?></td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsipil" name="hargasipil<?= $no ?>">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsipil" name="bobotsipil<?= $no ?>" readonly>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsipil" name="hari_kerjasipil<?= $no ?>">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control fieldsipil" name="Progress<?= $no ?>">
+                                                    </td>
+
+                                                </tr>
+                                            <?php $no++; } ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                         </div>
+                        <div class="box-footer">
+                            <input type="submit" id="btninput2" name="submit" class="btn btn-success" value="Simpan">
+                        </div>
+                        </form>                               
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<script type="text/javascript">
-
-function autofill(){
-      var kks = $ ("#kks").val();
-      $.ajax({
-        url : 'autofill-ajax.php',
-        data : 'kks='+kks,
-      }).done (function(data){
-        var json = data;
-        var obj = JSON.parse(json);
-        $("#eq").val(obj.eq);
-        $("#boboteq").val(obj.boboteq);
-        $("#noeq").val(obj.noeq);
-      });
-    }
-
-</script>

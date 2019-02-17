@@ -44,7 +44,7 @@
                                                     <td><?= $data['jenis_pekerjaan'] ?></td>
                                                     <td>
 
-                                                    <?php if ($page == 'input1') { ?>
+                                                    <?php if ($page == 'direksipekerjaan') { ?>
                                                     <a class="btn btn-primary btn-sm" href="?page=direksipekerjaanedit&id=<?php echo $data['nomer_pjn_spj']; ?>"><i class="fa fa-edit"></i> edit</a>
                                                     <a class="btn btn-danger btn-sm" href="?page=direksipekerjaanhapus&id=<?php echo $data['nomer_pjn_spj']; ?>"><i class="fa fa-trash"></i> hapus</a>
                                                     <?php } ?>
