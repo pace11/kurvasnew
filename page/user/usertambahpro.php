@@ -1,5 +1,5 @@
 <section class="content-header">
-    <h1><i class="fa fa-plus-circle"></i> EDIT USER</h1>
+    <h1><i class="fa fa-plus-circle"></i> INPUT USER</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
     </ol>
@@ -12,11 +12,11 @@
                 <div class="col-md-12">
                     <div class="box box-success">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Form Edit Data</h3>
+                            <h3 class="box-title">Form Tambah Data</h3>
                         </div>
                         
                         <div class="box-body">
-                            <?php 
+                            <?php
                             
                             if (isset($_POST['submit'])){
                                 
@@ -24,10 +24,10 @@
                                 $username       = strtoupper($_POST['username']);
                                 $password       = $_POST['password'];
 
-                                    $input = mysqli_query($conn,"UPDATE tbl_user SET
+                                    $input = mysqli_query($conn,"INSERT INTO tbl_user SET
+                                            username        = '$username',
                                             password        = '$password',
-                                            role            = '$role'
-                                            WHERE username  = '$username'  
+                                            role            = '$role'    
                                     ") or die (mysqli_error($conn));
 
                                     if ($input){

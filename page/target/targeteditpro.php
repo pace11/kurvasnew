@@ -1,46 +1,53 @@
 <section class="content-header">
-    <h1>INPUT TARGET</h1>
+    <h1><i class="fa fa-plus-circle"></i> INPUT TARGET </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-home"></i>Beranda</a></li>
+        <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
     </ol>
 </section>
 
-<div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card card-default">
-                    
-                    <div class="card-header">
-                        <h4><i class="fa fa-file-alt"></i> Form Edit Data</h4>
-                        <div class="card-tools">
-                            <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                            <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+<section class="content container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-success">
+                        <div class="box-header with-border">
+                            <div class="pull-left">
+                                <h3 class="box-title">Form Edit Target</h3>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="card-body">
+                        <div class="box-body">
                         <?php
-                        
-                        if (isset($_POST['submit'])){
-                                                        
-                            $nodin_ren        = $_POST['nodin_ren'];
-                            $uraian           = $_POST['uraian'];
-                            $harga            = $_POST['harga'];
-                            $bobot            = $_POST['bobot'];
-                            $hari_kerja_week  = $_POST['hari_kerja_week'];
-                            $masa_spj         = $_POST['masa_spj'];
 
-                                $input = mysqli_query($conn,"UPDATE tbl_input5 SET
-                                        nodin_ren         = '$nodin_ren',
-                                        uraian            = '$uraian',
-                                        harga             = '$harga',
-                                        bobot             = '$bobot',
-                                        hari_kerja_week   = '$hari_kerja_week',
-                                        masa_spj          = '$masa_spj'                                        
-                                        WHERE nodin_ren   = '$nodin_ren'
+                        if (isset($_POST['submit'])){
+
+                            $nomer_pjn_spj   = $_POST['nopjn'];
+                            $count           = $_POST['count'];
+                            echo $count;
+                            $jenispekerjaan  = $_POST['jenispekerjaan'];
+
+                            if ($jenispekerjaan == 'SKTM'){
+                                for ($a=1;$a<=$count;$a++) {    
+                                    $isi['harga'] = $_POST["hargasktm".$a.""];
+                                    $isi['bobot'] = $_POST["bobotsktm".$a.""];
+                                    $isi['harikerja'] = $_POST["hari_kerjasktm".$a.""];
+                                    $value[] = $isi;
+                                }
+                            } else {
+                                for ($a=1;$a<=$count;$a++) {    
+                                    $isi['harga'] = $_POST["hargasipil".$a.""];
+                                    $isi['bobot'] = $_POST["bobotsipil".$a.""];
+                                    $isi['harikerja'] = $_POST["hari_kerjasipil".$a.""];
+                                    $value[] = $isi;
+                                }
+                            }
+                            $valuePekerjaan = json_encode($value);
+                            
+                                $input = mysqli_query($conn,"UPDATE tbl_input2 SET
+                                        nomer_pjn_spj   = '$nomer_pjn_spj',
+                                        value_pekerjaan = '$valuePekerjaan'
                                         ") or die (mysqli_error($conn));
-                                                             
+                                                                
                                 if ($input){
                                     echo    '<div class="row">'.
                                                 '<div class="col-md-12">'.
@@ -52,13 +59,13 @@
                                     echo "<meta http-equiv='refresh' content='1;
                                     url=?page=target'>";
                                 }
-                            } 
+                        }
+
                         ?>
-                    </div>
-                    <div class="card-footer">
+                        </div>                              
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

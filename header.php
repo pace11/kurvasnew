@@ -12,12 +12,13 @@
             $dataval = mysqli_fetch_array($getval);
             $json = json_decode($dataval['value_pekerjaan']);
             $no=0;
-            echo "<div class='table-responsive'><table class='table table-bordered'><thead><tr><th>Uraian</th><th>Harga</th><th>Bobot</th><th>Hari Kerja</th></tr></thead><tbody>";
+            echo "<div class='table-responsive'><table class='table table-bordered'><thead><tr><th>Uraian</th><th>Harga</th><th>Bobot</th><th>Mulai Kerja</th><th>Hari Kerja</th></tr></thead><tbody>";
             while($data = mysqli_fetch_array($query)){
                 echo "<tr>";
                 echo "<td>".$data['id_sktm']."</td>";
                 echo "<td>".$json[$no]->harga."</td>";
                 echo "<td>".$json[$no]->bobot."</td>";
+                echo "<td>".$json[$no]->mulaikerja."</td>";
                 echo "<td>".$json[$no]->harikerja."</td>";
                 echo "</tr>";
                 $no++;
@@ -29,12 +30,13 @@
             $dataval = mysqli_fetch_array($getval);
             $json = json_decode($dataval['value_pekerjaan']);
             $no=0;
-            echo "<div class='table-responsive'><table class='table table-bordered'><thead><tr><th>Uraian</th><th>Harga</th><th>Bobot</th><th>Hari Kerja</th></tr></thead><tbody>";
+            echo "<div class='table-responsive'><table class='table table-bordered'><thead><tr><th>Uraian</th><th>Harga</th><th>Bobot</th><th>Mulai Kerja</th><th>Hari Kerja</th></tr></thead><tbody>";
             while($data = mysqli_fetch_array($query)){
                 echo "<tr>";
                 echo "<td>".$data['id_sipil']."</td>";
                 echo "<td>".$json[$no]->harga."</td>";
                 echo "<td>".$json[$no]->bobot."</td>";
+                echo "<td>".$json[$no]->mulaikerja."</td>";
                 echo "<td>".$json[$no]->harikerja."</td>";
                 echo "</tr>";
                 $no++;
