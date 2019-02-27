@@ -75,7 +75,7 @@
                     <div class="box box-success">
                         <div class="box-header with-border">
                             <div class="pull-left">
-                                <h3 class="box-title">Form Edit Target</h3>
+                                <h3 class="box-title">Form Pengisian Target</h3>
                             </div>
                         </div>
                         <div class="box-body">
@@ -98,11 +98,11 @@
                                             </select>   
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">   
-                                        <label>Jenis Pekerjaan</label>
-                                        <input type="text" id="jenispekerjaan" class="form-control" name="jenispekerjaan" readonly>
+                                    <div class="col-md-4">
+                                        <div class="form-group">   
+                                            <label>Jenis Pekerjaan</label>
+                                            <input type="text" id="jenispekerjaan" class="form-control" name="jenispekerjaan" readonly>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -114,20 +114,13 @@
                                         <table class="table table-bordered">
                                             <tbody>
                                             <tr>
-                                                <td><?= $no ?></td>
-                                                <td><?= $data['id_sktm'] ?></td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsktm" name="hargasktm<?= $no ?>" id="hargasktm<?= $no ?>">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsktm" name="bobotsktm<?= $no ?>" id="bobotsktm<?= $no ?>" readonly>
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsktm" name="mulaikerjasktm<?= $no ?>">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsktm" name="hari_kerjasktm<?= $no ?>">
-                                                </td>
+                                                <th style="width: 10px">No</th>
+                                                <th>Uraian</th>
+                                                <th>Harga</th>
+                                                <th>Bobot</th>
+                                                <th>Mulai Kerja (week)</th>
+                                                <th>Lama Kerja (week)</th>
+
                                             </tr>
                                             <?php
                                                 $no = 1;
@@ -173,20 +166,12 @@
                                         <table class="table table-bordered">
                                             <tbody>
                                             <tr>
-                                                <td><?= $no ?></td>
-                                                <td><?= $data['id_sipil'] ?></td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsipil" name="hargasipil<?= $no ?>">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsipil" name="bobotsipil<?= $no ?>" readonly>
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsipil" name="mulaikerjasipil<?= $no ?>">
-                                                </td>
-                                                <td>
-                                                    <input type="text" class="form-control fieldsipil" name="hari_kerjasipil<?= $no ?>">
-                                                </td>
+                                                <th style="width: 10px">No</th>
+                                                <th>Uraian</th>
+                                                <th>Harga</th>
+                                                <th>Bobot</th>
+                                                <th>Mulai Kerja(week)</th>
+                                                <th>Lama Kerja (week)</th>
                                             </tr>
                                             <?php
                                                 $no = 1;
@@ -215,7 +200,6 @@
                                         </table>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                         <div class="box-footer">
                             <input type="submit" id="btninput2" name="submit" class="btn btn-success" value="Simpan">
