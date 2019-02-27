@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2019 at 11:07 AM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 5.6.36
+-- Generation Time: Feb 27, 2019 at 04:41 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,26 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `monitoring`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_input2`
---
-
-CREATE TABLE `tbl_input2` (
-  `id_pekerjaan` int(10) NOT NULL,
-  `nomer_pjn_spj` varchar(40) NOT NULL,
-  `value_pekerjaan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_input2`
---
-
-INSERT INTO `tbl_input2` (`id_pekerjaan`, `nomer_pjn_spj`, `value_pekerjaan`) VALUES
-(1, '0013/DAN 02.03/A.BLG/2019', '[{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"11\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"11\"},{\"harga\":\"11\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"11\",\"bobot\":\"\",\"harikerja\":\"1\"}]'),
-(3, '0015/DAN 02.03/A.BLG/2018', '[{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"23\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"2\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"2\"},{\"harga\":\"1\",\"bobot\":\"\",\"harikerja\":\"1\"},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null},{\"harga\":null,\"bobot\":null,\"harikerja\":null}]');
 
 -- --------------------------------------------------------
 
@@ -178,6 +158,18 @@ INSERT INTO `tbl_sktm` (`id`, `id_sktm`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_target`
+--
+
+CREATE TABLE `tbl_target` (
+  `id_pekerjaan` int(10) NOT NULL,
+  `nomer_pjn_spj` varchar(40) NOT NULL,
+  `value_pekerjaan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_user`
 --
 
@@ -199,13 +191,6 @@ INSERT INTO `tbl_user` (`username`, `password`, `role`) VALUES
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `tbl_input2`
---
-ALTER TABLE `tbl_input2`
-  ADD PRIMARY KEY (`id_pekerjaan`),
-  ADD KEY `nomer_pjn_spj` (`nomer_pjn_spj`);
 
 --
 -- Indexes for table `tbl_input4`
@@ -238,6 +223,13 @@ ALTER TABLE `tbl_sktm`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_target`
+--
+ALTER TABLE `tbl_target`
+  ADD PRIMARY KEY (`id_pekerjaan`),
+  ADD KEY `nomer_pjn_spj` (`nomer_pjn_spj`);
+
+--
 -- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -248,26 +240,26 @@ ALTER TABLE `tbl_user`
 --
 
 --
--- AUTO_INCREMENT for table `tbl_input2`
---
-ALTER TABLE `tbl_input2`
-  MODIFY `id_pekerjaan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `tbl_pengawas`
 --
 ALTER TABLE `tbl_pengawas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `tbl_target`
+--
+ALTER TABLE `tbl_target`
+  MODIFY `id_pekerjaan` int(10) NOT NULL AUTO_INCREMENT;
+
+--
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `tbl_input2`
+-- Constraints for table `tbl_target`
 --
-ALTER TABLE `tbl_input2`
-  ADD CONSTRAINT `tbl_input2_ibfk_1` FOREIGN KEY (`nomer_pjn_spj`) REFERENCES `tbl_input4` (`nomer_pjn_spj`);
+ALTER TABLE `tbl_target`
+  ADD CONSTRAINT `tbl_target_ibfk_1` FOREIGN KEY (`nomer_pjn_spj`) REFERENCES `tbl_input4` (`nomer_pjn_spj`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

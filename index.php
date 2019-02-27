@@ -106,6 +106,11 @@
 </script>
 <script>
     $(document).ready(function(){
+      var count = 0,
+          hrgsktm = 0,
+          bobotsktm = 0,
+          hrgsipil = 0,
+          bobotsipil = 0; 
       $('#tblsktm,#tblsipil,#btninput2').hide();
       $("#nopjn").change(function(){
         var no  = $("#nopjn").val();
@@ -119,17 +124,52 @@
                 $('.fieldsktm').attr('required',true);
                 $('.fieldsipil').removeAttr('required');
                 $('#tblsktm').show(500);
+                count = $('#countsktm').val();
                 $('#tblsipil').hide();
+                  $('.hargasktm').keyup(function(){
+                    var jmlhrgsktm = 0,
+                        pace = 0;
+                    $('.hargasktm').each(function(i, val){
+                      jmlhrgsktm += +$('#hargasktm'+i).val();
+                      $('.jmlhargasktm').val(jmlhrgsktm);
+                      pace = $('#hargasktm'+i).val();
+                      count = ((pace/jmlhrgsktm)*100);
+                      $('#bobotsktm'+i).val(count);
+                    });
+                    
+
+                  });
               } else {
                 $('.fieldsipil').attr('required',true);
                 $('.fieldsktm').removeAttr('required');
                 $('#tblsipil').show(500);
+                count = $('#countsipil').val();
                 $('#tblsktm').hide();
+                  $('.hargasipil').each(function(i,val){
+                    $('#'+this.id).keyup(function(){
+                      hrgsipil = $('#'+this.id).val();
+                      count = hrgsipil*2;
+                      $('#bobotsipil'+i).val(count);
+                    });
+                  });
               }
             }
           });
+          
       });
 
+      
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $('#inputa').keyup(function(){
+        var nil = $('#inputa').val();
+            nil = nil*2;
+
+        $('#inputb').val(nil);
+
+      });
     });
   </script>
 </body>
