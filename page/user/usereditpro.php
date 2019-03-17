@@ -21,13 +21,17 @@
                             if (isset($_POST['submit'])){
                                 
                                 $role           = $_POST['role'];
-                                $username       = strtoupper($_POST['username']);
-                                $password       = $_POST['password'];
+                                $name           = $_POST['name'];
+                                $username       = strtoupper($_POST['user_name']);
+                                $password       = $_POST['user_password'];
+                                $iduser         = $_POST['id_user'];
 
                                     $input = mysqli_query($conn,"UPDATE tbl_user SET
-                                            password        = '$password',
-                                            role            = '$role'
-                                            WHERE username  = '$username'  
+                                        name            = '$name',
+                                        username        = '$username',
+                                        password        = '$password',
+                                        role            = '$role'
+                                        WHERE id_user   = $iduser  
                                     ") or die (mysqli_error($conn));
 
                                     if ($input){

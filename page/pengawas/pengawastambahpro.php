@@ -20,11 +20,16 @@
                             
                             if (isset($_POST['submit'])){
                                 
-                                $pengawas = $_POST['pengawas'];
+                                $name           = $_POST['name'];
+                                $username       = strtoupper($_POST['user_name']);
+                                $password       = $_POST['user_password'];
 
-                                    $input = mysqli_query($conn,"INSERT INTO tbl_pengawas SET
-                                            pengawas = '$pengawas'
-                                            ") or die (mysqli_error($conn));
+                                    $input = mysqli_query($conn,"INSERT INTO tbl_user SET
+                                        name        = '$name',
+                                        username    = '$username',
+                                        password    = '$password',
+                                        role        = 3   
+                                    ") or die (mysqli_error($conn));
                                                                     
                                     if ($input){
                                         echo    '<div class="row">'.

@@ -26,22 +26,27 @@
                                         <tr>
                                             <th>NO</th>
                                             <th>NAMA PENGAWAS</th>
+                                            <th>USERNAME</th>
+                                            <th>PASSWORD</th>
                                             <th>AKSI</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-                                        $sql = mysqli_query($conn,"SELECT * FROM tbl_pengawas") or die (mysqli_error($conn));
+                                        $no = 1;
+                                        $sql = mysqli_query($conn,"SELECT * FROM tbl_user WHERE role <> 0 AND role <> 1 AND role <> 2") or die (mysqli_error($conn));
                                         while($data = mysqli_fetch_array($sql)){ ?>
-                                            <tr>    
-                                                <td><?= $data['id'] ?></td>
-                                                <td><?= $data['pengawas'] ?></a></td>
+                                            <tr>        
+                                                <td><?= $no ?></td>
+                                                <td><?= $data['name'] ?></a></td>
+                                                <td><a class="btn btn-success btn-sm"><span class="fa fa-user"></span> <?= $data['username'] ?></a></td>
+                                                <td>*****</td>
                                                 <td>
-                                                    <a class="btn btn-primary btn-sm" href="?page=pengawasedit&id=<?php echo $data['pengawas']; ?>"><i class="fa fa-edit"></i> Edit</a>
-                                                    <a class="btn btn-danger btn-sm" href="?page=pengawashapus&id=<?php echo $data['pengawas']; ?>"><i class="fa fa-trash"></i> hapus</a>
+                                                    <a class="btn btn-primary btn-sm" href="?page=pengawasedit&id=<?php echo $data['id_user']; ?>"><i class="fa fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-danger btn-sm" href="?page=pengawashapus&id=<?php echo $data['id_user']; ?>"><i class="fa fa-trash"></i> hapus</a>
                                                 </td>
                                             </tr>
-                                        <?php  } ?>
+                                        <?php $no++; } ?>
                                     </tbody>
                                 </table>
                             </div>

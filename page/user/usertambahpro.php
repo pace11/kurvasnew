@@ -21,13 +21,15 @@
                             if (isset($_POST['submit'])){
                                 
                                 $role           = $_POST['role'];
-                                $username       = strtoupper($_POST['username']);
-                                $password       = $_POST['password'];
+                                $name           = $_POST['name'];
+                                $username       = strtoupper($_POST['user_name']);
+                                $password       = $_POST['user_password'];
 
                                     $input = mysqli_query($conn,"INSERT INTO tbl_user SET
-                                            username        = '$username',
-                                            password        = '$password',
-                                            role            = '$role'    
+                                        name            = '$name',
+                                        username        = '$username',
+                                        password        = '$password',
+                                        role            = '$role'    
                                     ") or die (mysqli_error($conn));
 
                                     if ($input){

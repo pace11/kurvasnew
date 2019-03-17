@@ -66,15 +66,17 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <div class="small-box bg-blue">
                         <div class="inner">
-                            <h3>Users</h3>
-                            <h2><?= $hitusers ?></h2>
+                        <h3><?= $hitusers ?></h3>
+
+                        <p>All Users</p>
                         </div>
                         <div class="icon">
-                            <i class="fa fa-users"></i>
-                        </div> 
+                        <i class="fa fa-users"></i>
+                        </div>
+                        <a href="#" class="small-box-footer"></a>
                     </div>
                 </div>
             </div>

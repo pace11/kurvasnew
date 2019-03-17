@@ -7,20 +7,10 @@
 
 <?php 
 
-    $getdata = mysqli_query($conn, "SELECT * FROM tbl_user WHERE username='$_GET[id]'") or die (mysqli_error($koneksi));
+    $getdata = mysqli_query($conn, "SELECT * FROM tbl_user WHERE id_user=$_GET[id]") or die (mysqli_error($koneksi));
     $data    = mysqli_fetch_array($getdata);
     
 ?>
-<script>
-    function myFunction() {
-    var x = document.getElementById("password-field");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
-    }
-</script>
 <section class="content container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -41,24 +31,28 @@
                                                 <select name="role" class="form-control">
                                                     <option value="1" <?= ($data['role'] == 1) ? "SELECTED" : ""; ?>>MANAGER</option>
                                                     <option value="2" <?= ($data['role'] == 2) ? "SELECTED" : ""; ?>>SEKRETARIS</option>
-                                                    <option value="3" <?= ($data['role'] == 3) ? "SELECTED" : ""; ?>>PENGAWAS</option>
                                                 </select>
+                                                <input type="hidden" class="form-control" name="id_user" value="<?= $data['id_user'] ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Nama</label>
+                                                <input type="text" class="form-control" name="name" placeholder="masukkan username ..." value="<?= $data['name'] ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Username</label>
-                                                <input type="text" class="form-control" name="username" style="text-transform:uppercase;" placeholder="masukkan username ..." value="<?= $data['username'] ?>" required>
+                                                <input type="text" class="form-control" name="user_name" style="text-transform:uppercase;" placeholder="masukkan username ..." value="<?= $data['username'] ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Password</label>
-                                                <input id="password-field" type="password" class="form-control" name="password" placeholder="masukkan password ..." value="<?= $data['password'] ?>" required>
-                                                <input type="checkbox" onclick="myFunction()">Show Password
+                                                <input id="password-field" type="password" class="form-control" name="user_password" placeholder="masukkan password ..." value="<?= $data['password'] ?>" required>
+                                                <span toggle="#password-field" class="fa fa-lg fa-eye field-icon toggle-password"></span>
                                             </div>
                                         </div>
                                 </div>
                             </div>
                         </div>
                         <div class="box-footer">
-                            <input type="submit" name="submit" class="btn btn-info" value="Simpan">
+                            <input type="submit" name="submit" class="btn btn-success" value="Simpan">
                             <a href="?page=user" class="btn btn-danger">Batal</a>
                         </div>
                         </form>

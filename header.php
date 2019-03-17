@@ -3,6 +3,7 @@
     $user = $_SESSION['username'];
     $sql = mysqli_query($conn, "SELECT * FROM tbl_user WHERE username='$user'");
     $userdata = mysqli_fetch_array($sql);
+    $role = $userdata['role'];
 
     function getValPekerjaan($id,$kerja){
         include "lib/koneksi.php";

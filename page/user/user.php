@@ -25,6 +25,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Nama</th>
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Role</th>
@@ -34,10 +35,11 @@
                                     <tbody>
                                         <?php
                                         $no = 1;
-                                        $sql = mysqli_query($conn,"SELECT * FROM tbl_user WHERE role <> 0") or die (mysqli_error($conn));
+                                        $sql = mysqli_query($conn,"SELECT * FROM tbl_user WHERE role <> 0 AND role <> 3") or die (mysqli_error($conn));
                                         while($data = mysqli_fetch_array($sql)){ ?>
                                             <tr>    
                                                 <td><?= $no ?></td>
+                                                <td><?= $data['name'] ?></td>
                                                 <td><a class="btn btn-success btn-sm" href="#"><i class="fa fa-user"></i> <?= $data['username'] ?></a></td>
                                                 <td>*****</td>
                                                 <td>
@@ -54,8 +56,8 @@
                                                 ?>
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-primary btn-sm" href="?page=useredit&id=<?php echo $data['username']; ?>"><i class="fa fa-edit"></i> Edit</a>
-                                                    <a class="btn btn-danger btn-sm" href="?page=userhapus&id=<?php echo $data['username']; ?>"><i class="fa fa-trash"></i> hapus</a>
+                                                    <a class="btn btn-primary btn-sm" href="?page=useredit&id=<?php echo $data['id_user']; ?>"><i class="fa fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-danger btn-sm" href="?page=userhapus&id=<?php echo $data['id_user']; ?>"><i class="fa fa-trash"></i> hapus</a>
                                                 </td>
                                             </tr>
                                         <?php $no++; } ?>

@@ -6,7 +6,7 @@
 </section>
 
 <?php 
-    $getdata = mysqli_query($conn, "SELECT * FROM tbl_pengawas WHERE pengawas='$_GET[id]'") or die (mysqli_error($conn));
+    $getdata = mysqli_query($conn, "SELECT * FROM tbl_user WHERE id_user=$_GET[id]") or die (mysqli_error($conn));
     $data    = mysqli_fetch_array($getdata);
 
 ?>
@@ -26,16 +26,24 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>NO</label>    
-                                        <input type="text" class="form-control" name="id" value="<?= $data['id'] ?>" placeholder="masukan nama pengawas" readonly>
+                                        <input type="hidden" class="form-control" name="id_user" value="<?= $data['id_user'] ?>" readonly>
+                                        <a class="btn btn-success btn-flat">PENGAWAS</a>
                                     </div>
                                     <div class="form-group">
-                                        <label>PENGAWAS</label>    
-                                        <input type="text" class="form-control" name="pengawas" value="<?= $data['pengawas'] ?>" placeholder="masukan nama pengawas">
+                                        <label>Nama</label>    
+                                        <input type="text" class="form-control" name="name" value="<?= $data['name'] ?>" placeholder="masukan nama pengawas" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label>    
+                                        <input type="text" class="form-control" name="user_name" style="text-transform:uppercase;" value="<?= $data['username'] ?>" placeholder="masukan username pengawas ..." required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input id="password-field" type="password" class="form-control" name="user_password" placeholder="masukkan password pengawas ..." value="<?= $data['password'] ?>" required>
+                                        <span toggle="#password-field" class="fa fa-lg fa-eye field-icon toggle-password"></span>
                                     </div>
                                 </div>
-                            </div>                      
-                        
+                            </div>       
                         </div>
                         <div class="box-footer">
                             <input type="submit" name="submit" class="btn btn-success" value="Simpan">

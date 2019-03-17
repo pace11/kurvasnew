@@ -23,25 +23,30 @@
                                             <div class="form-group">
                                                 <label>Hak Akses/Role</label>
                                                 <select name="role" class="form-control">
+                                                    <option style="display:none;">-- pilih salah satu --</option>
                                                     <option value="1">MANAGER</option>
                                                     <option value="2">SEKRETARIS</option>
-                                                    <option value="3">PENGAWAS</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
+                                                <label>Nama</label>
+                                                <input type="text" class="form-control" name="name" placeholder="masukkan nama ..." autocomplete="off" required>
+                                            </div>
+                                            <div class="form-group">
                                                 <label>Username</label>
-                                                <input type="text" class="form-control" name="username" placeholder="masukkan username ..." required>
+                                                <input type="text" class="form-control" name="user_name" placeholder="masukkan username ..." autocomplete="off" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Password</label>
-                                                <input type="text" class="form-control" name="password" placeholder="masukkan password ..." required>
+                                                <input id="password-field" type="password" class="form-control" name="user_password" placeholder="masukkan password ..." autocomplete="off" required>
+                                                <span toggle="#password-field" class="fa fa-lg fa-eye field-icon toggle-password"></span>
                                             </div>
                                         </div>
                                 </div>
                             </div>
                         </div>
                         <div class="box-footer">
-                            <input type="submit" name="submit" class="btn btn-info" value="Simpan">
+                            <input type="submit" name="submit" class="btn btn-success" value="Simpan">
                             <a href="?page=user" class="btn btn-danger">Batal</a>
                         </div>
                         </form>

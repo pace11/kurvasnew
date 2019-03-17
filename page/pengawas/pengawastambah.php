@@ -4,20 +4,6 @@
         <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
     </ol>
 </section>
-<?php 
-
-// $get_id = mysqli_query($conn, "SELECT nomer_pjn_spj FROM tbl_input4 WHERE SUBSTRING(nomer_pjn_spj,1,7)='PJN/SPJ'") or die (mysqli_error($conn));
-//         $trim_id = mysqli_query($conn, "SELECT SUBSTRING(nomer_pjn_spj,-4,4) as hasil FROM tbl_input4 WHERE SUBSTRING(nomer_pjn_spj,1,7)='PJN/SPJ' ORDER BY hasil DESC LIMIT 1") or die (mysqli_error($conn));
-//         $hit    = mysqli_num_rows($get_id);
-//         if ($hit == 0){
-//             $id_k   = "PJN/SPJ/".date("d-m-Y")."/0001";
-//         } else if ($hit > 0){
-//             $row    = mysqli_fetch_array($trim_id);
-//             $kode   = $row['hasil']+1;
-//             $id_k   = "PJN/SPJ/".date("d-m-Y")."/".str_pad($kode,4,"0",STR_PAD_LEFT); 
-//         }
- ?>
-
 <section class="content container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -33,12 +19,23 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>PENGAWAS</label>    
-                                        <input type="text" class="form-control" name="pengawas" placeholder="masukan nama pengawas">
+                                        <a class="btn btn-success btn-flat">PENGAWAS</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nama</label>     
+                                        <input type="text" class="form-control" name="name" placeholder="masukan nama pengawas" autocomplete="OFF" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label>    
+                                        <input type="text" class="form-control" name="user_name" placeholder="masukan username pengawas ..." autocomplete="OFF" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input id="password-field" type="password" class="form-control" name="user_password" placeholder="masukkan password pengawas ..." autocomplete="OFF" required>
+                                        <span toggle="#password-field" class="fa fa-lg fa-eye field-icon toggle-password"></span>
                                     </div>
                                 </div>
-                            </div>                      
-                        
+                            </div> 
                         </div>
                         <div class="box-footer">
                             <input type="submit" name="submit" class="btn btn-success" value="Simpan">

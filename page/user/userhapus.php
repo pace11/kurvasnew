@@ -32,7 +32,7 @@
                                 <?php 
                                 if(isset($_POST['submit'])){
                                     $iduser = $_POST['iduser'];
-                                    $delete = mysqli_query($conn,"DELETE FROM tbl_user WHERE username='$iduser'") or die (mysqli_error($conn));
+                                    $delete = mysqli_query($conn,"DELETE FROM tbl_user WHERE id_user=$iduser") or die (mysqli_error($conn));
                                     if ($delete){
                                         echo    '<div class="row">'.
                                                     '<div class="col-md-12">'.
